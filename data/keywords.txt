@@ -1,0 +1,7 @@
+size
+sholder
+legs
+hips
+measure
+weight
+fit
