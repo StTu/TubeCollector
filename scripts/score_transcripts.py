@@ -69,6 +69,8 @@ def main(args):
     with open(args.youtube_ids_scoring, "w") as score_file:
       for line in f:
         id = line.strip()
+         # remove the url part
+        id = id.replace("https://www.youtube.com/watch?v=","")
         print('Processing', id)
 
         with open(path.join(args.transcript_folder,id+'.json')) as transcript_file:
