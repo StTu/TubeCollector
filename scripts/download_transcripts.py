@@ -16,6 +16,8 @@ def main(args):
   with open(args.youtube_ids_file, "r") as f:
     for line in f:
       id = line.strip()
+      # remove the url part
+      id = id.replace("https://www.youtube.com/watch?v=","")
       print('Processing', id)
       # retrieve the available transcripts
       transcript_list = YouTubeTranscriptApi.list_transcripts(id)
